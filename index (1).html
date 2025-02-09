@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RC Like</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f0f0f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px 0;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.white-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.white-box input {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.white-box button {
+    margin-top: 10px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+
+.contact-info a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>RC Like</h1>
+
+        <button onclick="showForm('postLikes')">Post Likes Booster</button>
+        <button onclick="showForm('reelsLikes')">Reels Likes Booster</button>
+        <button onclick="showForm('reelsViews')">Reels Views Booster</button>
+        <button onclick="showForm('followers')">Followers Booster</button>
+
+        <div class="image-container">
+            <img src="your_image.jpg" alt="Your Image">
+        </div>
+
+        <div class="contact-info">
+            Contact Us:
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+        </div>
+
+        <div id="postLikes" class="white-box" style="display:none;">
+            <h2>Post Like Boost</h2>
+            <input type="text" id="postPhone" placeholder="Phone No">
+            <input type="text" id="postQuantity" placeholder="Quantity">
+            <input type="text" id="postLink" placeholder="Post Link">
+            <button onclick="sendEmail('Post%20Like%20Boost', 'postPhone', 'postQuantity', 'postLink')">Order</button>
+        </div>
+
+        <div id="reelsLikes" class="white-box" style="display:none;">
+            <h2>Reels Like Boost</h2>
+            <input type="text" id="reelsLikesPhone" placeholder="Phone No">
+            <input type="text" id="reelsLikesQuantity" placeholder="Quantity">
+            <input type="text" id="reelsLikesLink" placeholder="Reels Link">
+            <button onclick="sendEmail('Reels%20Like%20Boost', 'reelsLikesPhone', 'reelsLikesQuantity', 'reelsLikesLink')">Order</button>
+        </div>
+
+        <div id="reelsViews" class="white-box" style="display:none;">
+            <h2>Reels View Boost</h2>
+            <input type="text" id="reelsViewsPhone" placeholder="Phone No">
+            <input type="text" id="reelsViewsQuantity" placeholder="Quantity">
+            <input type="text" id="reelsViewsLink" placeholder="Reels Link">
+            <button onclick="sendEmail('Reels%20View%20Boost', 'reelsViewsPhone', 'reelsViewsQuantity', 'reelsViewsLink')">Order</button>
+        </div>
+
+        <div id="followers" class="white-box" style="display:none;">
+            <h2>Followers Boost</h2>
+            <input type="text" id="followersPhone" placeholder="Phone No">
+            <input type="text" id="followersQuantity" placeholder="Quantity">
+            <input type="text" id="followersLink" placeholder="Profile Link">
+            <button onclick="sendEmail('Followers%20Boost', 'followersPhone', 'followersQuantity', 'followersLink')">Order</button>
+        </div>
+
+    </div>
+
+    <script>
+        function showForm(formId) {
+            const forms = ['postLikes', 'reelsLikes', 'reelsViews', 'followers'];
+            forms.forEach(id => document.getElementById(id).style.display = 'none');
+            document.getElementById(formId).style.display = 'block';
+        }
+
+        function sendEmail(subject, phoneId, quantityId, linkId) {
+            const phone = document.getElementById(phoneId).value;
+            const quantity = document.getElementById(quantityId).value;
+            const link = document.getElementById(linkId).value;
+
+            const mailtoLink = `mailto:your_email@example.com?subject=${subject}&body=Phone:%20${phone}%0D%0AQuantity:%20${quantity}%0D%0ALink:%20${link}`; //Simplified Link Label
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+</body>
+</html>
