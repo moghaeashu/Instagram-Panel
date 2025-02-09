@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>RC Like</title>
+<title>Instagram Panel By Eashu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
@@ -90,11 +90,17 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.payment-instructions {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #555;
+}
 </style>
 </head>
 <body>
     <div class="container">
-        <h1>RC Like</h1>
+        <h1>Instagram Panel By Eashu</h1>
 
         <button onclick="showForm('postLikes')">Post Likes Booster 500 Likes = Rs 10</button>
         <button onclick="showForm('reelsLikes')">Reels Likes Booster 500 Likes = Rs 10</button>
@@ -102,6 +108,7 @@ button:hover {
         <button onclick="showForm('followers')">Followers Booster 100 Followers = Rs 45</button>
 
         <div class="image-container">
+            <div class="payment-instructions">Pay the amount on this QR Code to get your order complete.</div>
             <img src="payment.png" alt="Your Image">
         </div>
 
@@ -113,34 +120,38 @@ button:hover {
 
         <div id="postLikes" class="white-box" style="display:none;">
             <h2>Post Like Boost</h2>
+            <input type="text" id="postName" placeholder="Your Name">
             <input type="text" id="postPhone" placeholder="Phone No">
             <input type="text" id="postQuantity" placeholder="Quantity">
             <input type="text" id="postLink" placeholder="Post Link">
-            <button onclick="sendEmail('Post%20Like%20Boost', 'postPhone', 'postQuantity', 'postLink')">Order</button>
+            <button onclick="sendEmail('Post%20Like%20Boost', 'postName', 'postPhone', 'postQuantity', 'postLink')">Order</button>
         </div>
 
         <div id="reelsLikes" class="white-box" style="display:none;">
             <h2>Reels Like Boost</h2>
+            <input type="text" id="reelsLikesName" placeholder="Your Name">
             <input type="text" id="reelsLikesPhone" placeholder="Phone No">
             <input type="text" id="reelsLikesQuantity" placeholder="Quantity">
             <input type="text" id="reelsLikesLink" placeholder="Reels Link">
-            <button onclick="sendEmail('Reels%20Like%20Boost', 'reelsLikesPhone', 'reelsLikesQuantity', 'reelsLikesLink')">Order</button>
+            <button onclick="sendEmail('Reels%20Like%20Boost', 'reelsLikesName', 'reelsLikesPhone', 'reelsLikesQuantity', 'reelsLikesLink')">Order</button>
         </div>
 
         <div id="reelsViews" class="white-box" style="display:none;">
             <h2>Reels View Boost</h2>
+            <input type="text" id="reelsViewsName" placeholder="Your Name">
             <input type="text" id="reelsViewsPhone" placeholder="Phone No">
             <input type="text" id="reelsViewsQuantity" placeholder="Quantity">
             <input type="text" id="reelsViewsLink" placeholder="Reels Link">
-            <button onclick="sendEmail('Reels%20View%20Boost', 'reelsViewsPhone', 'reelsViewsQuantity', 'reelsViewsLink')">Order</button>
+            <button onclick="sendEmail('Reels%20View%20Boost', 'reelsViewsName', 'reelsViewsPhone', 'reelsViewsQuantity', 'reelsViewsLink')">Order</button>
         </div>
 
         <div id="followers" class="white-box" style="display:none;">
             <h2>Followers Boost</h2>
+            <input type="text" id="followersName" placeholder="Your Name">
             <input type="text" id="followersPhone" placeholder="Phone No">
             <input type="text" id="followersQuantity" placeholder="Quantity">
             <input type="text" id="followersLink" placeholder="Profile Link">
-            <button onclick="sendEmail('Followers%20Boost', 'followersPhone', 'followersQuantity', 'followersLink')">Order</button>
+            <button onclick="sendEmail('Followers%20Boost', 'followersName', 'followersPhone', 'followersQuantity', 'followersLink')">Order</button>
         </div>
 
     </div>
@@ -152,12 +163,13 @@ button:hover {
             document.getElementById(formId).style.display = 'block';
         }
 
-        function sendEmail(subject, phoneId, quantityId, linkId) {
+        function sendEmail(subject, nameId, phoneId, quantityId, linkId) {
+            const name = document.getElementById(nameId).value;
             const phone = document.getElementById(phoneId).value;
             const quantity = document.getElementById(quantityId).value;
             const link = document.getElementById(linkId).value;
 
-            const mailtoLink = `mailto:your_email@example.com?subject=${subject}&body=Phone:%20${phone}%0D%0AQuantity:%20${quantity}%0D%0ALink:%20${link}`; //Simplified Link Label
+            const mailtoLink = `mailto:your_email@example.com?subject=${subject}&body=Name:%20${name}%0D%0APhone:%20${phone}%0D%0AQuantity:%20${quantity}%0D%0ALink:%20${link}`;
 
             window.location.href = mailtoLink;
         }
