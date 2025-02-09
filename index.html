@@ -121,37 +121,41 @@ button:hover {
         <div id="postLikes" class="white-box" style="display:none;">
             <h2>Post Like Boost</h2>
             <input type="text" id="postName" placeholder="Name as your payment id">
+            <input type="text" id="postAmount" placeholder="Amount you pay on QR">
             <input type="text" id="postPhone" placeholder="Phone No">
             <input type="text" id="postQuantity" placeholder="Quantity">
             <input type="text" id="postLink" placeholder="Post Link">
-            <button onclick="sendEmail('Post%20Like%20Boost', 'postName', 'postPhone', 'postQuantity', 'postLink')">Order</button>
+            <button onclick="sendEmail('Post%20Like%20Boost', 'postName', 'postAmount', 'postPhone', 'postQuantity', 'postLink')">Order</button>
         </div>
 
         <div id="reelsLikes" class="white-box" style="display:none;">
             <h2>Reels Like Boost</h2>
             <input type="text" id="reelsLikesName" placeholder="Name as your payment id">
+            <input type="text" id="reelsLikesAmount" placeholder="Amount you pay on QR">
             <input type="text" id="reelsLikesPhone" placeholder="Phone No">
             <input type="text" id="reelsLikesQuantity" placeholder="Quantity">
             <input type="text" id="reelsLikesLink" placeholder="Reels Link">
-            <button onclick="sendEmail('Reels%20Like%20Boost', 'reelsLikesName', 'reelsLikesPhone', 'reelsLikesQuantity', 'reelsLikesLink')">Order</button>
+            <button onclick="sendEmail('Reels%20Like%20Boost', 'reelsLikesName', 'reelsLikesAmount', 'reelsLikesPhone', 'reelsLikesQuantity', 'reelsLikesLink')">Order</button>
         </div>
 
         <div id="reelsViews" class="white-box" style="display:none;">
             <h2>Reels View Boost</h2>
             <input type="text" id="reelsViewsName" placeholder="Name as your payment id">
+            <input type="text" id="reelsViewsAmount" placeholder="Amount you pay on QR">
             <input type="text" id="reelsViewsPhone" placeholder="Phone No">
             <input type="text" id="reelsViewsQuantity" placeholder="Quantity">
             <input type="text" id="reelsViewsLink" placeholder="Reels Link">
-            <button onclick="sendEmail('Reels%20View%20Boost', 'reelsViewsName', 'reelsViewsPhone', 'reelsViewsQuantity', 'reelsViewsLink')">Order</button>
+            <button onclick="sendEmail('Reels%20View%20Boost', 'reelsViewsName', 'reelsViewsAmount', 'reelsViewsPhone', 'reelsViewsQuantity', 'reelsViewsLink')">Order</button>
         </div>
 
         <div id="followers" class="white-box" style="display:none;">
             <h2>Followers Boost</h2>
             <input type="text" id="followersName" placeholder="Name as your payment id">
+            <input type="text" id="followersAmount" placeholder="Amount you pay on QR">
             <input type="text" id="followersPhone" placeholder="Phone No">
             <input type="text" id="followersQuantity" placeholder="Quantity">
             <input type="text" id="followersLink" placeholder="Profile Link">
-            <button onclick="sendEmail('Followers%20Boost', 'followersName', 'followersPhone', 'followersQuantity', 'followersLink')">Order</button>
+            <button onclick="sendEmail('Followers%20Boost', 'followersName', 'followersAmount', 'followersPhone', 'followersQuantity', 'followersLink')">Order</button>
         </div>
 
     </div>
@@ -163,13 +167,14 @@ button:hover {
             document.getElementById(formId).style.display = 'block';
         }
 
-        function sendEmail(subject, nameId, phoneId, quantityId, linkId) {
+        function sendEmail(subject, nameId, amountId, phoneId, quantityId, linkId) {
             const name = document.getElementById(nameId).value;
+            const amount = document.getElementById(amountId).value;
             const phone = document.getElementById(phoneId).value;
             const quantity = document.getElementById(quantityId).value;
             const link = document.getElementById(linkId).value;
 
-            const mailtoLink = `mailto:instapaneleashu@gmail.com?subject=${subject}&body=Name:%20${name}%0D%0APhone:%20${phone}%0D%0AQuantity:%20${quantity}%0D%0ALink:%20${link}`;
+            const mailtoLink = `mailto:instapaneleashu@gmail.com?subject=${subject}&body=Name:%20${name}%0D%0AAmount:%20${amount}%0D%0APhone:%20${phone}%0D%0AQuantity:%20${quantity}%0D%0ALink:%20${link}`;
 
             window.location.href = mailtoLink;
         }
