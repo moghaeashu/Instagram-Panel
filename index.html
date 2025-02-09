@@ -115,7 +115,7 @@ button:hover {
         <div class="contact-info">
             Contact Us:
             <a href="#">Instagram</a>
-            <a href="#">WhatsApp</a>
+            <a href="https://wa.me/918979873681">WhatsApp</a>
         </div>
 
         <div id="postLikes" class="white-box" style="display:none;">
@@ -169,7 +169,7 @@ button:hover {
             const quantity = document.getElementById(quantityId).value;
             const link = document.getElementById(linkId).value;
 
-            const mailtoLink = `mailto:your_email@example.com?subject=${subject}&body=Name:%20${name}%0D%0APhone:%20${phone}%0D%0AQuantity:%20${quantity}%0D%0ALink:%20${link}`;
+            const mailtoLink = `mailto:?subject=${subject}&body=Name:%20${name}%0D%0APhone:%20${phone}%0D%0AQuantity:%20${quantity}%0D%0ALink:%20${link}`;
 
             window.location.href = mailtoLink;
         }
