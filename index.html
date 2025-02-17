@@ -9,24 +9,24 @@
 
 <style>
 
-body {
+    body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
     background: linear-gradient(to bottom, #f0f0f5, #e6e6fa);
     color: #333;
-    font-size: 30px; /* Doubled base font size (approximately) */
+    font-size: 22px; /* Good starting point */
 }
 
 h1 {
     text-align: center;
-    padding: 60px; /* Doubled padding */
+    padding: 35px;
     color: #fff;
     background: rgba(0, 0, 0, 0.7);
-    margin-bottom: 60px; /* Doubled margin */
-    text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6); /* More prominent text shadow */
-    font-size: 72px; /* Doubled heading size */
+    margin-bottom: 35px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    font-size: 50px; /* Good heading size */
 }
 
 .content {
@@ -35,23 +35,23 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px; /* Doubled padding */
-    max-width: 1800px; /* Increased max-width */
+    padding: 35px;
+    max-width: 1700px;
     margin: 0 auto;
 }
 
 .section {
     display: none;
-    padding: 80px; /* Doubled padding */
+    padding: 55px;
     background-color: #fff;
-    border-radius: 16px; /* Increased border-radius */
-    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.3); /* More prominent box-shadow */
-    margin-bottom: 70px; /* Doubled margin */
+    border-radius: 13px;
+    box-shadow: 0 9px 16px rgba(0, 0, 0, 0.22);
+    margin-bottom: 45px;
     text-align: center;
-    width: 98%; /* Use percentage for width */
-    max-width: 1400px; /* Set a max-width */
+    width: 98%;
+    max-width: 1300px;
     box-sizing: border-box;
-    min-height: 900px; /* Increased min-height */
+    min-height: 750px;
 }
 
 #initial {
@@ -60,27 +60,27 @@ h1 {
 
 .section h2 {
     color: #007bff;
-    margin-bottom: 40px; /* Doubled margin */
-    font-size: 60px; /* Doubled heading size */
+    margin-bottom: 28px;
+    font-size: 40px;
 }
 
 form label {
     display: block;
-    margin-bottom: 16px; /* Doubled margin */
+    margin-bottom: 11px;
     color: #555;
     text-align: left;
-    font-size: 36px; /* Doubled label size */
+    font-size: 24px;
 }
 
 input[type="text"], input[type="number"] {
     width: 100%;
-    padding: 30px; /* Doubled padding */
-    margin-bottom: 30px; /* Doubled margin */
+    padding: 23px;
+    margin-bottom: 23px;
     box-sizing: border-box;
     border: 1px solid #ced4da;
-    border-radius: 12px; /* Increased border-radius */
+    border-radius: 11px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    font-size: 32px; /* Doubled input size */
+    font-size: 22px;
 }
 
 input[type="text"]:focus, input[type="number"]:focus {
@@ -92,13 +92,13 @@ input[type="text"]:focus, input[type="number"]:focus {
 button {
     background-color: #007bff;
     color: white;
-    padding: 30px 50px; /* Doubled padding */
+    padding: 23px 39px;
     border: none;
     cursor: pointer;
     width: 100%;
-    border-radius: 12px; /* Increased border-radius */
+    border-radius: 11px;
     transition: background-color 0.15s ease-in-out;
-    font-size: 32px; /* Doubled button size */
+    font-size: 22px;
 }
 
 button:hover {
@@ -107,8 +107,8 @@ button:hover {
 
 .payment-note {
     color: #dc3545;
-    font-size: 1.5em; /* Increased font size */
-    margin-top: 24px; /* Doubled margin */
+    font-size: 1.25em;
+    margin-top: 17px;
 }
 
 .navbar {
@@ -119,7 +119,7 @@ button:hover {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 25px 0; /* Doubled padding */
+    padding: 19px 0;
 }
 
 .navbar a {
@@ -129,7 +129,7 @@ button:hover {
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.15s ease-in-out;
-    font-size: 1.5rem; /* Increased font size */
+    font-size: 1.25rem;
 }
 
 .navbar a:hover {
@@ -137,13 +137,13 @@ button:hover {
 }
 
 .navbar a img {
-    width: 70px;   /* Doubled icon size */
-    height: 70px;  /* Doubled icon size */
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 14px; /* Doubled margin */
+    margin-bottom: 12px;
     display: block;
-    margin: 0 auto 14px; /* Doubled margin */
+    margin: 0 auto 12px;
 }
 
 
@@ -168,45 +168,45 @@ button:hover {
 }
 
 img[src="qr_code.png"] {
-    max-width: 700px; /* Doubled QR code size */
+    max-width: 600px;
 }
 
 /* Responsive adjustments (example) */
-@media (max-width: 992px) { /* Adjust breakpoint as needed */
+@media (max-width: 992px) {
   .section {
     width: 95%;
-    padding: 70px;
-    min-height: 800px;
+    padding: 48px;
+    min-height: 650px;
   }
 }
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+@media (max-width: 768px) {
     .section {
         width: 95%;
-        padding: 60px;
-        min-height: 700px;
+        padding: 42px;
+        min-height: 550px;
     }
 
     .navbar a img {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
     }
 
     h1 {
-        font-size: 60px;
-        padding: 40px;
+        font-size: 46px;
+        padding: 28px;
     }
 
     .content {
-        padding: 40px;
+        padding: 28px;
     }
 }
 
 @media (max-width: 600px) {
     .section {
         width: 95%;
-        padding: 50px;
-        min-height: 600px;
+        padding: 38px;
+        min-height: 450px;
     }
 
     .navbar a img {
@@ -215,33 +215,33 @@ img[src="qr_code.png"] {
     }
 
     h1 {
-        font-size: 52px;
-        padding: 30px;
+        font-size: 40px;
+        padding: 24px;
     }
 
     .content {
-        padding: 30px;
+        padding: 24px;
     }
 
     input[type="text"], input[type="number"] {
-        font-size: 30px;
-        padding: 28px;
+        font-size: 20px;
+        padding: 21px;
     }
 
     button {
-        font-size: 30px;
-        padding: 28px 45px;
+        font-size: 20px;
+        padding: 21px 37px;
     }
 
     form label {
-        font-size: 34px;
+        font-size: 22px;
     }
 
     .navbar a {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
-    
+ 
 </style>
     
 </head>
@@ -290,9 +290,9 @@ img[src="qr_code.png"] {
     <div id="post-likes" class="section">
         <h2>Post Likes Boost</h2>
         <form id="postLikesForm">
-            <label for="postLikesPaymentId">Payment ID:</label>
+            <label for="postLikesPaymentId">Name as your Payment ID:</label>
             <input type="text" name="paymentId" id="postLikesPaymentId" placeholder="Payment ID" required>
-            <label for="postLikesAmount">Amount:</label>
+            <label for="postLikesAmount">Amount you pay on qr code:</label>
             <input type="number" name="amount" id="postLikesAmount" placeholder="Amount" required>
             <label for="postLikesPhone">Phone Number:</label>
             <input type="text" name="phone" id="postLikesPhone" placeholder="Phone Number" required>
@@ -308,9 +308,9 @@ img[src="qr_code.png"] {
     <div id="reels-likes" class="section">
         <h2>Reels Likes Boost</h2>
         <form id="reelsLikesForm">
-            <label for="reelsLikesPaymentId">Payment ID:</label>
+            <label for="reelsLikesPaymentId">Name as your Payment ID:</label>
             <input type="text" name="paymentId" id="reelsLikesPaymentId" placeholder="Payment ID" required>
-            <label for="reelsLikesAmount">Amount:</label>
+            <label for="reelsLikesAmount">Amount you pay on qr code:</label>
             <input type="number" name="amount" id="reelsLikesAmount" placeholder="Amount" required>
             <label for="reelsLikesPhone">Phone Number:</label>
             <input type="text" name="phone" id="reelsLikesPhone" placeholder="Phone Number" required>
@@ -326,9 +326,9 @@ img[src="qr_code.png"] {
     <div id="reels-views" class="section">
         <h2>Reels Views Boost</h2>
         <form id="reelsViewsForm">
-            <label for="reelsViewsPaymentId">Payment ID:</label>
+            <label for="reelsViewsPaymentId">Name as your Payment ID:</label>
             <input type="text" name="paymentId" id="reelsViewsPaymentId" placeholder="Payment ID" required>
-            <label for="reelsViewsAmount">Amount:</label>
+            <label for="reelsViewsAmount">Amount you pay on qr code:</label>
             <input type="number" name="amount" id="reelsViewsAmount" placeholder="Amount" required>
             <label for="reelsViewsPhone">Phone Number:</label>
             <input type="text" name="phone" id="reelsViewsPhone" placeholder="Phone Number" required>
@@ -344,9 +344,9 @@ img[src="qr_code.png"] {
     <div id="followers" class="section">
         <h2>Followers Boost</h2>
         <form id="followersForm">
-            <label for="followersPaymentId">Payment ID:</label>
+            <label for="followersPaymentId">Name as your Payment ID:</label>
             <input type="text" name="paymentId" id="followersPaymentId" placeholder="Payment ID" required>
-            <label for="followersAmount">Amount:</label>
+            <label for="followersAmount">Amount you pay on qr code:</label>
             <input type="number" name="amount" id="followersAmount" placeholder="Amount" required>
             <label for="followersPhone">Phone Number:</label>
             <input type="text" name="phone" id="followersPhone" placeholder="Phone Number" required>
