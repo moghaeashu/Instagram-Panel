@@ -16,17 +16,17 @@ body {
     min-height: 100vh;
     background: linear-gradient(to bottom, #f0f0f5, #e6e6fa);
     color: #333;
-    font-size: 18px; /* Increased base font size */
+    font-size: 22px; /* Increased base font size */
 }
 
 h1 {
     text-align: center;
-    padding: 20px;
+    padding: 30px; /* Increased padding */
     color: #fff;
     background: rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 36px; /* Increased heading size */
+    margin-bottom: 30px; /* Increased margin */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* More prominent text shadow */
+    font-size: 48px; /* Increased heading size */
 }
 
 .content {
@@ -35,22 +35,23 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    max-width: 1300px;
+    padding: 30px; /* Increased padding */
+    max-width: 1500px; /* Increased max-width */
     margin: 0 auto;
 }
 
 .section {
     display: none;
-    padding: 30px; /* Increased padding */
+    padding: 50px; /* Increased padding */
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Increased margin */
+    border-radius: 12px; /* Increased border-radius */
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2); /* Even more prominent box-shadow */
+    margin-bottom: 40px; /* Increased margin */
     text-align: center;
-    width: 900px;
+    width: 98%; /* Use percentage for width */
+    max-width: 1100px; /* Set a max-width */
     box-sizing: border-box;
-    min-height: 1500px;
+    min-height: 700px; /* Increased min-height */
 }
 
 #initial {
@@ -59,27 +60,27 @@ h1 {
 
 .section h2 {
     color: #007bff;
-    margin-bottom: 15px;
-    font-size: 30px; /* Increased heading size */
+    margin-bottom: 25px; /* Increased margin */
+    font-size: 40px; /* Increased heading size */
 }
 
 form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Increased margin */
     color: #555;
     text-align: left;
-    font-size: 18px; /* Increased label size */
+    font-size: 24px; /* Increased label size */
 }
 
 input[type="text"], input[type="number"] {
     width: 100%;
-    padding: 15px; /* Increased padding */
-    margin-bottom: 15px;
+    padding: 20px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
     box-sizing: border-box;
     border: 1px solid #ced4da;
-    border-radius: 4px;
+    border-radius: 8px; /* Increased border-radius */
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    font-size: 18px; /* Increased input size */
+    font-size: 22px; /* Increased input size */
 }
 
 input[type="text"]:focus, input[type="number"]:focus {
@@ -91,13 +92,13 @@ input[type="text"]:focus, input[type="number"]:focus {
 button {
     background-color: #007bff;
     color: white;
-    padding: 15px 25px; /* Increased padding */
+    padding: 20px 35px; /* Increased padding */
     border: none;
     cursor: pointer;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 8px; /* Increased border-radius */
     transition: background-color 0.15s ease-in-out;
-    font-size: 18px; /* Increased button size */
+    font-size: 22px; /* Increased button size */
 }
 
 button:hover {
@@ -106,8 +107,8 @@ button:hover {
 
 .payment-note {
     color: #dc3545;
-    font-size: 1em;
-    margin-top: 10px;
+    font-size: 1.2em; /* Slightly increased font size */
+    margin-top: 15px; /* Increased margin */
 }
 
 .navbar {
@@ -118,7 +119,7 @@ button:hover {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 15px 0; /* Increased padding */
 }
 
 .navbar a {
@@ -128,6 +129,7 @@ button:hover {
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.15s ease-in-out;
+    font-size: 1.2rem; /* Slightly increased font size */
 }
 
 .navbar a:hover {
@@ -135,18 +137,15 @@ button:hover {
 }
 
 .navbar a img {
-    width: 40px; /* Increased icon size */
-    height: 40px; /* Increased icon size */
+    width: 50px;   /* Increased icon size */
+    height: 50px;  /* Increased icon size */
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Increased margin */
     display: block;
-    margin: 0 auto 5px;
+    margin: 0 auto 10px; /* Increased margin */
 }
 
-.navbar a span {
-    font-size: 1rem; /* Increased navigation label size */
-}
 
 #payment {
     background-color: #f5f5f5;
@@ -169,27 +168,77 @@ button:hover {
 }
 
 img[src="qr_code.png"] {
-    max-width: 400px; /* Increased QR code size */
+    max-width: 500px; /* Increased QR code size */
 }
 
 /* Responsive adjustments (example) */
-@media (max-width: 600px) {
-    .content {
-        padding: 10px;
-    }
+@media (max-width: 992px) { /* Adjust breakpoint as needed */
+  .section {
+    width: 95%;
+    padding: 40px;
+    min-height: 600px;
+  }
+}
 
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
     .section {
-        width: 95%; /* Make sections almost full width on small screens */
-        padding: 20px;
-    }
-
-    .navbar a {
-        padding: 5px;
+        width: 95%;
+        padding: 35px;
+        min-height: 500px;
     }
 
     .navbar a img {
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
+    }
+
+    h1 {
+        font-size: 40px;
+        padding: 25px;
+    }
+
+    .content {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        width: 95%;
+        padding: 30px;
+        min-height: 400px;
+    }
+
+    .navbar a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    input[type="text"], input[type="number"] {
+        font-size: 20px;
+        padding: 18px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 18px 30px;
+    }
+
+    form label {
+        font-size: 22px;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
     }
 }
 </style>
@@ -233,7 +282,7 @@ img[src="qr_code.png"] {
 
     <div id="payment" class="section">
         <h2>Payment</h2>
-        <img src="qr_code.png" alt="QR Code" style="max-width: 300px;">
+        <img src="qr_code.png" alt="QR Code" style="max-width: 600px;">
         <p>Pay on this QR</p>
     </div>
 
