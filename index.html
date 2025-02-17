@@ -26,10 +26,10 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }.content {
     flex: 1;
-    display: flex; /* Make content a flex container */
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -41,8 +41,13 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
-    width: 100%; /* Make sections take full width */
-    box-sizing: border-box; /* Include padding and border in width */
+    width: 90%; /* Make sections take 90% width */
+    box-sizing: border-box; 
+    min-height: 90vh; /* Make sections at least 90% of viewport height */
+}
+
+#initial {
+    display: block; /* Show the initial section */
 }.section h2 {
     color: #007bff;
     margin-bottom: 15px;
@@ -115,7 +120,7 @@ button:hover {
     display: block;
     margin: 0 auto 5px;
 }.navbar a span {
- font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 #payment { background-color: #f5f5f5; }
@@ -124,13 +129,15 @@ button:hover {
 #reels-views { background-color: #f0f0f5; }
 #followers { background-color: #f2f2f2; }
 
-@media (max-width: 600px) {.content {
+@media (max-width: 600px) {
+  .content {
         padding: 10px;
     }
 
   .navbar a {
         padding: 5px;
     }
+
   .navbar a img {
         width: 30px;
         height: 30px;
@@ -144,35 +151,35 @@ button:hover {
 
 <div class="content">
 
-<div id="initial" class="section">
-    <h3>Rates</h3>
-    <p>500 Likes = 10Rs | 1000 Likes = 20Rs</p>
-    <p>500 Views = 20Rs | 1000 Views = 40Rs</p>
-    <p>100 Followers = 45Rs | 200 Followers = 90Rs</p>
-    <div class="steps-container">
-        <h3>How to Use:</h3>
-        <div class="step">
-            <h4>Step 1: Go to Payment</h4>
-            <p>Navigate to the "Payment" section using the bottom navigation bar.</p>
-        </div>
-        <div class="step">
-            <h4>Step 2: Make Payment</h4>
-            <p>Scan the QR code and complete your payment.</p>
-        </div>
-        <div class="step">
-            <h4>Step 3: Choose Service</h4>
-            <p>Select the service you want to boost (Post Likes, Reels Likes, etc.) from the navigation bar.</p>
-        </div>
-        <div class="step">
-            <h4>Step 4: Fill the Form</h4>
-            <p>Provide the required information in the form, including your payment ID, amount, phone number, quantity, and link.</p>
-        </div>
-        <div class="step">
-            <h4>Step 5: Place Order</h4>
-            <p>Click the "Order" button to submit your request. Make sure you have made the payment before placing the order.</p>
+    <div id="initial" class="section">
+        <h3>Rates</h3>
+        <p>500 Likes = 10Rs | 1000 Likes = 20Rs</p>
+        <p>500 Views = 20Rs | 1000 Views = 40Rs</p>
+        <p>100 Followers = 45Rs | 200 Followers = 90Rs</p>
+        <div class="steps-container">
+            <h3>How to Use:</h3>
+            <div class="step">
+                <h4>Step 1: Go to Payment</h4>
+                <p>Navigate to the "Payment" section using the bottom navigation bar.</p>
+            </div>
+            <div class="step">
+                <h4>Step 2: Make Payment</h4>
+                <p>Scan the QR code and complete your payment.</p>
+            </div>
+            <div class="step">
+                <h4>Step 3: Choose Service</h4>
+                <p>Select the service you want to boost (Post Likes, Reels Likes, etc.) from the navigation bar.</p>
+            </div>
+            <div class="step">
+                <h4>Step 4: Fill the Form</h4>
+                <p>Provide the required information in the form, including your payment ID, amount, phone number, quantity, and link.</p>
+            </div>
+            <div class="step">
+                <h4>Step 5: Place Order</h4>
+                <p>Click the "Order" button to submit your request. Make sure you have made the payment before placing the order.</p>
+            </div>
         </div>
     </div>
-</div>
 
     <div id="payment" class="section">
         <h2>Payment</h2>
