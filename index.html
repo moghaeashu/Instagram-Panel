@@ -14,9 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.container {
+}.container {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -46,57 +44,49 @@ button {
 
 button:hover {
     background-color: #0056b3;
-}
-
-.white-box {
+}.white-box {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.white-box input {
+}.white-box input {
     margin-bottom: 15px;
     padding: 10px;
     width: calc(100% - 22px);
     box-sizing: border-box;
     border: 1px solid #ced4da;
     border-radius: 5px;
-}
-
-.white-box button {
+}.white-box button {
     margin-top: 10px;
-}
-
-.contact-info {
+}.contact-info {
     text-align: center;
     margin-top: 20px;
     color: #777;
-}
-
-.contact-info a {
+}.contact-info a {
     margin: 0 10px;
     color: #007bff;
     text-decoration: none;
-}
-
-.image-container {
+}.image-container {
     text-align: center;
     margin: 20px 0;
-}
-
-.image-container img {
+}.image-container img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.payment-instructions {
+}.payment-instructions {
     text-align: center;
     margin-bottom: 10px;
     color: #555;
+}
+
+/* Style for the success message */.success-message {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
 }
 </style>
 </head>
@@ -160,6 +150,9 @@ button:hover {
             <button onclick="sendEmail('Followers%20Boost', 'followersName', 'followersAmount', 'followersPhone', 'followersQuantity', 'followersLink')">Order</button>
         </div>
 
+        <div class="success-message" id="successMessage">
+            Your order get submitted successfully and your order get connected in 1 to 2 hours if you successfully make on that Q R code and if you not give any payment on that Q R code your order not get complete Thankyou
+        </div>
     </div>
 
     <script>
@@ -179,6 +172,18 @@ button:hover {
             const mailtoLink = `mailto:instapaneleashu@gmail.com?subject=${subject}&body=Name:%20${name}%0D%0AAmount:%20${amount}%0D%0APhone:%20${phone}%0D%0AQuantity:%20${quantity}%0D%0ALink:%20${link}`;
 
             window.location.href = mailtoLink;
+
+            // Show the success message and speak it
+            showSuccessMessage();
+        }
+
+        function showSuccessMessage() {
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+
+            // Speech synthesis
+            const message = new SpeechSynthesisUtterance(successMessage.textContent);
+            window.speechSynthesis.speak(message);
         }
     </script>
 
