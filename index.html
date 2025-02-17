@@ -51,7 +51,7 @@ h1 {
     width: 98%;
     max-width: 1400px;
     box-sizing: border-box;
-    min-height: 900px;
+    min-height: 900px; /* Adjust as needed */
 }
 
 #initial {
@@ -145,6 +145,31 @@ button:hover {
     display: block;
     margin: 0 auto 14px;
 }
+
+/* Payment Page Specific Styles */
+#payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center Vertically */
+    min-height: 900px; /* or auto, depending on content */
+
+}
+
+#payment img {
+    max-width: 80%; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Optional: Rounded corners for QR code */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* Optional: Add a subtle shadow */
+}
+
+#payment p {
+    font-size: 1.2rem; /* Optional: Make the text slightly larger */
+    color: #555; /* Optional: Slightly darker text */
+}
+
+
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
