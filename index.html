@@ -6,6 +6,7 @@
 <link rel="icon" type="logo.png" sizes="16x16" href="logo.png">
 <link rel="icon" type="logo.png" sizes="32x32" href="logo.png">
 <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+
 <style>
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,6 +16,7 @@ body {
     min-height: 100vh;
     background: linear-gradient(to bottom, #f0f0f5, #e6e6fa);
     color: #333;
+    font-size: 18px; /* Increased base font size */
 }
 
 h1 {
@@ -24,33 +26,41 @@ h1 {
     background: rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}.content {
+    font-size: 36px; /* Increased heading size */
+}
+
+.content {
     flex: 1;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     max-width: 1300px;
     margin: 0 auto;
-}.section {
+}
+
+.section {
     display: none;
-    padding: 20px;
+    padding: 30px; /* Increased padding */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased margin */
     text-align: center;
-    width: 900px; /* Make sections take 90% width */
-    box-sizing: border-box; 
-    min-height: 1500px; /* Make sections at least 90% of viewport height */
+    width: 900px;
+    box-sizing: border-box;
+    min-height: 1500px;
 }
 
 #initial {
-    display: block; /* Show the initial section */
-}.section h2 {
+    display: block;
+}
+
+.section h2 {
     color: #007bff;
     margin-bottom: 15px;
+    font-size: 30px; /* Increased heading size */
 }
 
 form label {
@@ -58,16 +68,18 @@ form label {
     margin-bottom: 5px;
     color: #555;
     text-align: left;
+    font-size: 18px; /* Increased label size */
 }
 
 input[type="text"], input[type="number"] {
     width: 100%;
-    padding: 12px;
+    padding: 15px; /* Increased padding */
     margin-bottom: 15px;
     box-sizing: border-box;
     border: 1px solid #ced4da;
     border-radius: 4px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-size: 18px; /* Increased input size */
 }
 
 input[type="text"]:focus, input[type="number"]:focus {
@@ -79,21 +91,26 @@ input[type="text"]:focus, input[type="number"]:focus {
 button {
     background-color: #007bff;
     color: white;
-    padding: 12px 20px;
+    padding: 15px 25px; /* Increased padding */
     border: none;
     cursor: pointer;
     width: 100%;
     border-radius: 4px;
     transition: background-color 0.15s ease-in-out;
+    font-size: 18px; /* Increased button size */
 }
 
 button:hover {
     background-color: #0056b3;
-}.payment-note {
+}
+
+.payment-note {
     color: #dc3545;
-    font-size: 0.9em;
+    font-size: 1em;
     margin-top: 10px;
-}.navbar {
+}
+
+.navbar {
     background-color: #343a40;
     overflow: hidden;
     position: fixed;
@@ -102,48 +119,81 @@ button:hover {
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
-}.navbar a {
+}
+
+.navbar a {
     display: block;
     color: #fff;
     text-align: center;
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.15s ease-in-out;
-}.navbar a:hover {
+}
+
+.navbar a:hover {
     opacity: 1;
-}.navbar a img {
-    width: 35px;
-    height: 35px;
+}
+
+.navbar a img {
+    width: 40px; /* Increased icon size */
+    height: 40px; /* Increased icon size */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 5px;
     display: block;
     margin: 0 auto 5px;
-}.navbar a span {
-    font-size: 0.8rem;
 }
 
-#payment { background-color: #f5f5f5; }
-#post-likes { background-color: #f8f9fa; }
-#reels-likes { background-color: #e9ecef; }
-#reels-views { background-color: #f0f0f5; }
-#followers { background-color: #f2f2f2; }
+.navbar a span {
+    font-size: 1rem; /* Increased navigation label size */
+}
 
+#payment {
+    background-color: #f5f5f5;
+}
+
+#post-likes {
+    background-color: #f8f9fa;
+}
+
+#reels-likes {
+    background-color: #e9ecef;
+}
+
+#reels-views {
+    background-color: #f0f0f5;
+}
+
+#followers {
+    background-color: #f2f2f2;
+}
+
+img[src="qr_code.png"] {
+    max-width: 400px; /* Increased QR code size */
+}
+
+/* Responsive adjustments (example) */
 @media (max-width: 600px) {
-  .content {
+    .content {
         padding: 10px;
     }
 
-  .navbar a {
+    .section {
+        width: 95%; /* Make sections almost full width on small screens */
+        padding: 20px;
+    }
+
+    .navbar a {
         padding: 5px;
     }
 
-  .navbar a img {
-        width: 30px;
-        height: 30px;
+    .navbar a img {
+        width: 35px;
+        height: 35px;
     }
 }
 </style>
+    
 </head>
 <body>
 
